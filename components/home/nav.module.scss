@@ -1,0 +1,27 @@
+.wrapper {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  z-index: 5;
+}
+
+.inner {
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 80px;
+  align-items: center;
+
+  color: #fff;
+}
+
+.btnBox {
+    display: flex;
+}
+
+.logoBox{
+    font-size: 40px
+}

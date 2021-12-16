@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Button from "../components/common/Button";
 import Hero from "../components/home/Hero";
+import Nav from "../components/home/Nav";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        {/* <Nav/> */}
+      <main style={{position:"relative"}}>
+        <Nav/>
         <Hero />
         {/* <Technologies/> */}
         {/* <Experience/> */}
