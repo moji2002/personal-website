@@ -1,0 +1,22 @@
+.box {
+    height:64px;
+    background-color: #676CDB;
+    max-width: 300px;
+    outline: none;
+    border: none;
+    padding:0 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary{
+    background-color: transparent;
+}
+
+.icon{
+    margin-right: 10px;
+}

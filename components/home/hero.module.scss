@@ -1,0 +1,30 @@
+.wrapper {
+  width: 100%;
+  background-color: #222a36;
+  padding: 100px;
+  color: #fff;
+  position: relative;
+}
+
+.inner {
+  max-width: 768px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.imgWrapper {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 80%;
+}
+
+.btnBox {
+  display: flex;
+}
+
+.text{
+    max-width: 600px;
+}
