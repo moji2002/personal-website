@@ -12,7 +12,7 @@ const Hero = () => {
         <h1>Hello!</h1>
         <h1>I'm Mojtaba Beheshti</h1>
         <p className={s.text}>
-          I'm freelance web developer based in indonesia who loves to craft
+          I'm a web developer based in Iran who loves to craft
           attractive design experiences for the web
         </p>
         <div className={s.btnBox}>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import s from "./component.module.scss";
 
-const Component = () => {
+const Contact = () => {
   return <div></div>;
 };
 
-export default Component;
+export default Contact;

@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Button from "../components/common/Button";
+import Experience from "../components/home/Experience";
 import Hero from "../components/home/Hero";
 import Nav from "../components/home/Nav";
+import Technologies from "../components/home/Technologies";
+
 
 export default function Home() {
   return (
@@ -15,8 +18,8 @@ export default function Home() {
       <main style={{position:"relative"}}>
         <Nav/>
         <Hero />
-        {/* <Technologies/> */}
-        {/* <Experience/> */}
+        <Technologies/>
+        <Experience/>
         {/* <Contact/> */}
       </main>
 

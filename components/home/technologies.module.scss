@@ -1,0 +1,24 @@
+.wrapper{
+    background-color: #000;
+    width: 100%;
+
+}
+
+.inner{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item{
+    width:150px ;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}

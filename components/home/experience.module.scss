@@ -1,0 +1,71 @@
+.wrapper {
+  background-color: #222a36;
+  width: 100%;
+
+  padding: 100px 122px;
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+}
+
+.leftHand {
+  max-width: 300px;
+  height: 100%;
+  width: 100%;
+
+  .text1 {
+    color: #676cdb;
+    font-size: 100px;
+  }
+
+  .text2 {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+.rightHand {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  .text3 {
+    font-size: 40px;
+    color: #fff;
+  }
+}
+.jobTitleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jobBox {
+  width: 288px;
+  height: 295px;
+  margin: 8px;
+  padding: 35px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  .jobInner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 50px;
+  }
+
+  .jobTitle {
+    text-align: left;
+  }
+}
+.purple {
+  background-color: #676cdb;
+}
+
+.gray {
+  background-color: #c4c4c4;
+}
