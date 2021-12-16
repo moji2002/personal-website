@@ -1,0 +1,62 @@
+.wrapper {
+  padding: 90px 115px;
+  height: 600px;
+  background-color: #000;
+  color: #fff;
+}
+
+.inner {
+  max-width: 1280px;
+  height: 100%;
+  padding: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text1 {
+  font-size: 100px;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.socialBox {
+  display: flex;
+}
+
+.socialIcon {
+  margin: 25px;
+  cursor: pointer;
+}
+
+.inputLabel {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.input {
+  background-color: rgba(#fff, 0.03);
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  outline: none;
+  caret-color: #676cdb;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.sendButton{
+    display: flex;
+
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sendButtonText{
+    margin-right: 20px;
+    font-size: 30px;
+    color: #676CDB;
+}

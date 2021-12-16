@@ -6,14 +6,14 @@ const Hero = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.imgWrapper}>
-        <Image src="/images/man.png" alt="" layout="fill" objectFit="cover" />
+        <Image src="/images/hero.jpg" alt="" layout="fill" objectFit="cover" />
       </div>
       <div className={s.inner}>
         <h1>Hello!</h1>
         <h1>I'm Mojtaba Beheshti</h1>
         <p className={s.text}>
-          I'm a web developer based in Iran who loves to craft
-          attractive design experiences for the web
+          I'm a web developer based in Iran / earth who loves to craft
+          attractive web sites and best experiences for others
         </p>
         <div className={s.btnBox}>
           <Button label="Email me" icon="email" />

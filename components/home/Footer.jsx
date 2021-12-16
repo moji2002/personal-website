@@ -1,8 +1,11 @@
 import Image from "next/image";
-import s from "./component.module.scss";
+import s from "./footer.module.scss";
 
-const Component = () => {
-  return <div></div>;
+const Footer = () => {
+  return <footer className={s.wrapper}>
+
+    Created by me | All Reserved!
+  </footer>
 };
 
-export default Component;
+export default Footer;

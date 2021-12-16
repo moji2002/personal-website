@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Button from "../components/common/Button";
+import Contact from "../components/home/Contact";
 import Experience from "../components/home/Experience";
+import Footer from "../components/home/Footer";
 import Hero from "../components/home/Hero";
 import Nav from "../components/home/Nav";
 import Technologies from "../components/home/Technologies";
@@ -15,16 +16,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={{position:"relative"}}>
+      <main >
         <Nav/>
         <Hero />
         <Technologies/>
         <Experience/>
-        {/* <Contact/> */}
+        <Contact/>
       </main>
-
+<Footer/>
       {/* <Footer/> */}
-      <footer></footer>
+      
     </div>
   );
 }
