@@ -10,9 +10,9 @@ const Hero = () => {
       </div>
       <div className={s.inner}>
         <h1>Hello!</h1>
-        <h1>I'm Mojtaba Beheshti</h1>
+        <h1>I&apos;m Mojtaba Beheshti</h1>
         <p className={s.text}>
-          I'm a web developer based in Iran / earth who loves to craft
+          I&apos;m a web developer based in Iran / earth who loves to craft
           attractive web sites and best experiences for others
         </p>
         <div className={s.btnBox}>
