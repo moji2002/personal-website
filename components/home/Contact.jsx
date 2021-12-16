@@ -6,7 +6,7 @@ const Contact = () => {
     <section className={s.wrapper}>
       <div className={s.inner}>
         <div className={s.leftHand}>
-          <h3 className={s.text1}>Let's</h3>
+          <h3 className={s.text1}>Let&apos;s</h3>
           <h3 className={s.text1}>Connect</h3>
           <div className={s.socialBox}>
             <SocialIcon icon="linkedin" />
