@@ -8,6 +8,7 @@ const Contact = () => {
   const nameRef = useRef();
   const emailRef = useRef();
   const contentRef = useRef();
+  const buttonRef = useRef();
 
   const initialState = { value: "", error: false };
 
@@ -30,20 +31,33 @@ const Contact = () => {
       setContentInput((prev) => ({ ...prev, error: true }));
       return toast("Just that?");
     }
-    const myPromise = new Promise((resolve) => {
-      setTimeout(() => resolve("hello"), 1000);
-    });
+    // const myPromise = new Promise((resolve) => {
+    //   setTimeout(() => resolve("hello"), 1000);
+    // });
 
-    toast.promise(myPromise, {
+    const promise = fetch(window.location.href+'/api/contact', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: nameInput.value,
+        email: emailInput.value,
+        content: contentInput.value,
+      }),
+    });
+    // response.json();
+
+    toast.promise(promise, {
       loading: "Loading",
-      success: "Got the data",
-      error: "Error when fetching",
+      success: "Got the info, tnx for contacting me",
+      error: "Error",
     });
 
     // clear inputs
-    setNameInput((prev) => ({ ...prev, value: "" }));
-    setEmailInput((prev) => ({ ...prev, value: "" }));
-    setContentInput((prev) => ({ ...prev, value: "" }));
+    // setNameInput((prev) => ({ ...prev, value: "" }));
+    // setEmailInput((prev) => ({ ...prev, value: "" }));
+    // setContentInput((prev) => ({ ...prev, value: "" }));
   };
 
   return (
@@ -64,6 +78,7 @@ const Contact = () => {
             label="Your name:"
             setInput={setNameInput}
             value={nameInput.value}
+            nextFocusRef={emailRef}
           />
           <Input
             inputRef={emailRef}
@@ -71,6 +86,7 @@ const Contact = () => {
             label="Your email address:"
             setInput={setEmailInput}
             value={emailInput.value}
+            nextFocusRef={contentRef}
           />
           <Input
             inputRef={contentRef}
@@ -78,8 +94,9 @@ const Contact = () => {
             label="Content:"
             setInput={setContentInput}
             value={contentInput.value}
+            nextFocusRef={buttonRef}
           />
-          <SendButton onClick={handleSendClick} />
+          <SendButton buttonRef={buttonRef} onClick={handleSendClick} />
         </div>
       </div>
     </section>
@@ -96,11 +113,17 @@ const SocialIcon = ({ icon }) => {
   );
 };
 
-const Input = ({ label, inputRef, error, setInput, value }) => {
+const Input = ({ label, inputRef, error, setInput, value, nextFocusRef }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && nextFocusRef) {
+      nextFocusRef.current?.focus();
+    }
+  };
   return (
     <div>
       <div className={s.inputLabel}>{label}</div>
       <input
+        onKeyDown={handleKeyDown}
         ref={inputRef}
         value={value}
         className={`${s.input} ${error && s.inputError}`}
@@ -111,9 +134,9 @@ const Input = ({ label, inputRef, error, setInput, value }) => {
   );
 };
 
-const SendButton = ({ onClick }) => {
+const SendButton = ({ onClick, buttonRef }) => {
   return (
-    <button onClick={onClick} className={s.sendButton}>
+    <button onClick={onClick} className={s.sendButton} ref={buttonRef}>
       <div className={s.sendButtonText}>Send</div>
       <Image src="/icons/arrow.svg" alt="send" width={30} height={30} />
     </button>

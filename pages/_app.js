@@ -5,9 +5,10 @@ function MyApp({ Component, pageProps }) {
   const toasterStyle = {
     background: "#676cdb",
     fontSize: 20,
-    padding: "40px 90px",
+    padding: "20px 40px",
     borderRadius: 0,
     color: "#fff",
+    minWidth:250
   };
 
   return (
