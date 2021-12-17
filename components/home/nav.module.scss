@@ -19,21 +19,19 @@
 }
 
 .btnBox {
-    display: flex;
+  display: flex;
 }
 
-.logoBox{
-    font-size: 40px;
-    font-weight: bold;
-    display: flex;
-    // flex-direction: row;
-    align-items: center;
+.logoBox {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  // flex-direction: row;
+  align-items: center;
 
-    span{
-      color: #676CDB;
-      font-size: 80px;
-      margin-top: -24px;
-      
-    }
-    
+  span {
+    color: #676cdb;
+    font-size: 80px;
+    margin-top: -24px;
+  }
 }

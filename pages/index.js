@@ -6,7 +6,6 @@ import Hero from "../components/home/Hero";
 import Nav from "../components/home/Nav";
 import Technologies from "../components/home/Technologies";
 
-
 export default function Home() {
   return (
     <div>
@@ -16,16 +15,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
-        <Nav/>
+      <main>
+        <Nav />
         <Hero />
-        <Technologies/>
-        <Experience/>
-        <Contact/>
+        <Technologies />
+        <Experience />
+        <Contact />
       </main>
-<Footer/>
+      <Footer />
       {/* <Footer/> */}
-      
     </div>
   );
 }

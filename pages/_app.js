@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     padding: "20px 40px",
     borderRadius: 0,
     color: "#fff",
-    minWidth:250
+    minWidth: 250,
   };
 
   return (
