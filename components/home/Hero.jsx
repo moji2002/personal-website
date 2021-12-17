@@ -6,7 +6,14 @@ const Hero = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.imgWrapper}>
-        <Image src="/images/hero.jpg" alt="" layout="fill" objectFit="cover" priority/>
+        <Image
+          src="/images/hero.jpg"
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          priority
+          sizes="50vw"
+        />
       </div>
       <div className={s.inner}>
         <h1 className={s.headerText}>Hello!</h1>
