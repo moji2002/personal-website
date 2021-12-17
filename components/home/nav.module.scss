@@ -3,7 +3,6 @@
   height: 100px;
   width: 100%;
   z-index: 5;
-  // backdrop-filter: blur(10px);
 }
 
 .inner {
@@ -24,5 +23,17 @@
 }
 
 .logoBox{
-    font-size: 40px
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+
+    span{
+      color: #676CDB;
+      font-size: 80px;
+      margin-top: -24px;
+      
+    }
+    
 }

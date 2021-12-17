@@ -3,7 +3,7 @@ import s from "./contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className={s.wrapper}>
+    <section id='contact' className={s.wrapper}>
       <div className={s.inner}>
         <div className={s.leftHand}>
           <h3 className={s.text1}>Let&apos;s</h3>
