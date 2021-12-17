@@ -1,18 +1,31 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const JSONdb = require("simple-json-db");
-const db = new JSONdb("./db/database.json");
+// const JSONdb = require("simple-json-db");
+// const db = new JSONdb("./db/database.json");
+
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
+
 import { nanoid } from "nanoid";
-const API_KEY = process.env.API_KEY
+const API_KEY = process.env.API_KEY;
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === "POST" && req.body.email) {
-    db.set(nanoid(), { ...req.body, date: Date.now() });
-
+    // db.set(nanoid(), { ...req.body, date: Date.now() });
+    await prisma.contact.create({
+      data: {
+        ...req.body,
+        id: nanoid(),
+      },
+    });
     return res.status(200).send();
   }
-
   if (req.method === "GET" && req.headers.token === API_KEY) {
-    return res.status(200).json(db.JSON());
+
+  // if (req.method === "GET") {
+    const result = await prisma.contact.findMany();
+    return res.status(200).json(result);
+
+    // return res.status(200).json(db.JSON());
   }
 
   return res.status(400).send();
