@@ -31,9 +31,7 @@ const Contact = () => {
       setContentInput((prev) => ({ ...prev, error: true }));
       return toast("Just that?");
     }
-    // const myPromise = new Promise((resolve) => {
-    //   setTimeout(() => resolve("hello"), 1000);
-    // });
+
 
     const promise = fetch(window.location.href+'/api/contact', {
       method: "POST",
@@ -46,7 +44,6 @@ const Contact = () => {
         content: contentInput.value,
       }),
     });
-    // response.json();
 
     toast.promise(promise, {
       loading: "Loading",
@@ -55,9 +52,9 @@ const Contact = () => {
     });
 
     // clear inputs
-    // setNameInput((prev) => ({ ...prev, value: "" }));
-    // setEmailInput((prev) => ({ ...prev, value: "" }));
-    // setContentInput((prev) => ({ ...prev, value: "" }));
+    setNameInput((prev) => ({ ...prev, value: "" }));
+    setEmailInput((prev) => ({ ...prev, value: "" }));
+    setContentInput((prev) => ({ ...prev, value: "" }));
   };
 
   return (

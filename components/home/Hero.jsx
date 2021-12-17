@@ -1,10 +1,8 @@
 import Button from "../common/Button";
 import Image from "next/image";
 import s from "./hero.module.scss";
-import { useRouter } from "next/router";
 
 const Hero = () => {
-  const router = useRouter();
   return (
     <div className={s.wrapper}>
       <div className={s.imgWrapper}>
