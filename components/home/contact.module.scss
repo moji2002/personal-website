@@ -3,6 +3,8 @@
   height: 600px;
   background-color: #000;
   color: #fff;
+
+
 }
 
 .inner {
@@ -47,6 +49,10 @@
   width: 300px;
 }
 
+.inputError{
+  outline: 1px solid red;
+}
+
 .sendButton{
     display: flex;
 
@@ -54,10 +60,10 @@
     border: none;
     align-items: center;
     cursor: pointer;
+    color: #676CDB;   
 }
 
 .sendButtonText{
     margin-right: 20px;
     font-size: 30px;
-    color: #676CDB;
 }
