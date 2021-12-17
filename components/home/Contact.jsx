@@ -32,8 +32,7 @@ const Contact = () => {
       return toast("Just that?");
     }
 
-
-    const promise = fetch(window.location.href+'/api/contact', {
+    const promise = fetch(window.location.href + "/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,8 +63,16 @@ const Contact = () => {
           <h3 className={s.text1}>Let&apos;s</h3>
           <h3 className={s.text1}>Connect</h3>
           <div className={s.socialBox}>
-            <SocialIcon icon="linkedin" />
-            <SocialIcon icon="github" />
+            <SocialIcon
+              icon="linkedin"
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/mojtaba-beheshti/")
+              }
+            />
+            <SocialIcon
+              icon="github"
+              onClick={() => window.open("https://github.com/moji2002")}
+            />
           </div>
         </div>
         <div className={s.rightHand}>
@@ -102,9 +109,9 @@ const Contact = () => {
 
 export default Contact;
 
-const SocialIcon = ({ icon }) => {
+const SocialIcon = ({ icon, onClick }) => {
   return (
-    <div className={s.socialIcon}>
+    <div className={s.socialIcon} onClick={onClick}>
       <Image src={`/icons/${icon}.svg`} alt={icon} width={25} height={25} />
     </div>
   );
