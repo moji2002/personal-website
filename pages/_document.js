@@ -23,6 +23,12 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <link
+            rel="preload"
+            href="/fonts/playfair_display/PlayfairDisplay-Regular.woff2"
+            as="font"
+            crossOrigin=""
+          />
         </Head>
         <body>
           <Main />
