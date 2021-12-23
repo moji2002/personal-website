@@ -1,14 +1,19 @@
 .wrapper {
   width: 100%;
   background-color: #222a36;
-  padding: 100px;
+  padding: 20px;
+  padding-top: 130px;
   color: #fff;
   position: relative;
-  height: 740px;
+  min-height: 740px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 100px;
+  }
 }
 
 .inner {
@@ -18,12 +23,17 @@
 }
 
 .imgWrapper {
-  width: 50%;
+  width: 100%;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  opacity: 40%;
+  opacity: 5%;
+
+  @media only screen and (min-width: 1024px) {
+    width: 50%;
+    opacity: 30%;
+  }
 }
 
 .btnBox {
@@ -36,9 +46,13 @@
 }
 
 .headerText {
-  font-size: 90px;
+  font-size: 55px;
   margin: 0;
   line-height: 1.2;
   font-weight: bold;
   font-family: "Playfair Display", "Times New Roman", Georgia, serif;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 90px;
+  }
 }

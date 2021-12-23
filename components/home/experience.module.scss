@@ -2,7 +2,11 @@
   background-color: #222a36;
   width: 100%;
 
-  padding: 100px 122px;
+  padding: 10px;
+
+  @media only screen and (min-width: 1024px) {
+    padding: 100px 122px;
+  }
 }
 
 .inner {
@@ -10,13 +14,10 @@
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  flex-wrap: wrap-reverse;
 }
 
 .leftHand {
-  max-width: 300px;
-  height: 100%;
-  width: 100%;
-
   .text1 {
     color: #676cdb;
     font-size: 120px;
@@ -32,8 +33,6 @@
   }
 }
 .rightHand {
-  height: 100%;
-  width: 100%;
   text-align: center;
 
   .text3 {
