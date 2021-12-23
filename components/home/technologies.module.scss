@@ -5,6 +5,7 @@
 
 .inner {
   max-width: 1280px;
+  height: 200px;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -12,10 +13,11 @@
   flex-wrap: wrap;
 }
 
-.item {
+.icon {
   width: 150px;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+

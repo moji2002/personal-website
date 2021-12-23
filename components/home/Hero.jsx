@@ -1,6 +1,7 @@
 import Button from "../common/Button";
 import Image from "next/image";
 import s from "./hero.module.scss";
+import * as icons from "../common/icons";
 
 const Hero = () => {
   return (
@@ -25,15 +26,15 @@ const Hero = () => {
         <div className={s.btnBox}>
           <Button
             label="Email me"
-            icon="email"
+            icon={<icons.Email/>}
             onClick={() => window.open("mailto: moji2002@gmail.com")}
           />
-          <Button
+          {/* <Button
             primary={false}
             label="Download CV"
             icon="download"
             onClick={() => window.open("/Resume-Mojtaba-beheshti.pdf")}
-          />
+          /> */}
         </div>
       </div>
     </div>

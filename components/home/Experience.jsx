@@ -1,5 +1,5 @@
-import Image from "next/image";
 import s from "./experience.module.scss";
+import * as icons from "../common/icons";
 
 const Experience = () => {
   return (
@@ -17,11 +17,11 @@ const Experience = () => {
           <div className={s.jobTitleContainer}>
             <JobTitleBox
               title="Node.js Experience"
-              icon="monitor"
+              icon={<icons.Monitor />}
               color="purple"
             />
-            <JobTitleBox title="Front End Developer" icon="paint" />
-            <JobTitleBox title="React enthusiastic" icon="thunder" />
+            <JobTitleBox title="Front End Developer" icon={<icons.Paint />} />
+            <JobTitleBox title="React enthusiastic" icon={<icons.Thunder />} />
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@ const JobTitleBox = ({ color = "gray", icon, title }) => {
   return (
     <div className={`${s.jobBox} ${s[color]}`}>
       <div className={s.jobInner}>
-        <Image src={`/icons/${icon}.svg`} alt={title} width={30} height={30} />
+        {icon}
         <h3
           style={{ color: color === "gray" ? "#000" : "#fff" }}
           className={s.jobTitle}

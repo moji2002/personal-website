@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import connectDB from "../../middleware/mongodb";
+import connectDB from "../../middleware/database";
 import Contact from "../../model/Contact";
 
 const API_KEY = process.env.API_KEY;

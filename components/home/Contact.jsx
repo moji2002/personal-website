@@ -3,6 +3,7 @@ import s from "./contact.module.scss";
 import toast from "react-hot-toast";
 import { useRef, useState } from "react";
 import validateEmail from "../../lib/validateEmail";
+import * as icons from "../common/icons";
 
 const Contact = () => {
   const nameRef = useRef();
@@ -64,13 +65,13 @@ const Contact = () => {
           <h3 className={s.text1}>Connect</h3>
           <div className={s.socialBox}>
             <SocialIcon
-              icon="linkedin"
+              icon={<icons.Linkedin/>}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/mojtaba-beheshti/")
               }
             />
             <SocialIcon
-              icon="github"
+              icon={<icons.Github/>}
               onClick={() => window.open("https://github.com/moji2002")}
             />
           </div>
@@ -112,7 +113,7 @@ export default Contact;
 const SocialIcon = ({ icon, onClick }) => {
   return (
     <div className={s.socialIcon} onClick={onClick}>
-      <Image src={`/icons/${icon}.svg`} alt={icon} width={25} height={25} />
+      {icon}
     </div>
   );
 };
@@ -142,7 +143,7 @@ const SendButton = ({ onClick, buttonRef }) => {
   return (
     <button onClick={onClick} className={s.sendButton} ref={buttonRef}>
       <div className={s.sendButtonText}>Send</div>
-      <Image src="/icons/arrow.svg" alt="send" width={30} height={30} />
+      <icons.Arrow/>
     </button>
   );
 };
