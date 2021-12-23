@@ -2,11 +2,16 @@ import Button from "../common/Button";
 import Image from "next/image";
 import s from "./hero.module.scss";
 import * as icons from "../common/icons";
+import { useState } from "react";
 
 const Hero = () => {
+  const [isImageLoaded, setImageLoaded] = useState(false);
   return (
     <div className={s.wrapper}>
-      <div className={s.imgWrapper}>
+      <div
+        className={s.imgWrapper}
+        style={{ opacity: isImageLoaded ? 0.3 : 0 }}
+      >
         <Image
           src="/images/hero.jpg"
           alt=""
@@ -14,6 +19,7 @@ const Hero = () => {
           objectFit="cover"
           priority
           sizes="50vw"
+          onLoadingComplete={() => setImageLoaded(true)}
         />
       </div>
       <div className={s.inner}>
