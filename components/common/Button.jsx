@@ -12,11 +12,7 @@ const Button = ({
       className={`${s.box} ${variant !== "primary" && s.secondary}`}
       onClick={onClick}
     >
-      {icon && (
-        <div className={s.icon}>
-          {icon}
-        </div>
-      )}
+      {icon && <div className={s.icon}>{icon}</div>}
       <div>{label}</div>
     </button>
   );

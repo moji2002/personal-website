@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>mb.</title>
         <meta name="description" content="my personal website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" as="icon" crossOrigin="" href="/favicon.ico" />
       </Head>
 
       <main>

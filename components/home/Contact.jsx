@@ -65,13 +65,13 @@ const Contact = () => {
           <h3 className={s.text1}>Connect</h3>
           <div className={s.socialBox}>
             <SocialIcon
-              icon={<icons.Linkedin/>}
+              icon={<icons.Linkedin />}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/mojtaba-beheshti/")
               }
             />
             <SocialIcon
-              icon={<icons.Github/>}
+              icon={<icons.Github />}
               onClick={() => window.open("https://github.com/moji2002")}
             />
           </div>
@@ -143,7 +143,7 @@ const SendButton = ({ onClick, buttonRef }) => {
   return (
     <button onClick={onClick} className={s.sendButton} ref={buttonRef}>
       <div className={s.sendButtonText}>Send</div>
-      <icons.Arrow/>
+      <icons.Arrow />
     </button>
   );
 };

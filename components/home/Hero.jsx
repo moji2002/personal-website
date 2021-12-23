@@ -26,7 +26,7 @@ const Hero = () => {
         <div className={s.btnBox}>
           <Button
             label="Email me"
-            icon={<icons.Email/>}
+            icon={<icons.Email />}
             onClick={() => window.open("mailto: moji2002@gmail.com")}
           />
           {/* <Button
