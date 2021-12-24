@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import connectDB from "../../middleware/database";
 import Contact from "../../model/Contact";
+import sendEmail from "../../services/email";
 
 const API_KEY = process.env.API_KEY;
 
@@ -8,6 +9,7 @@ const handler = async (req, res) => {
   try {
     if (req.method === "POST" && req.body.email) {
       await Contact.create({ ...req.body });
+      sendEmail(req.body);
       return res.status(200).send();
     }
     if (req.method === "GET" && req.headers.token === API_KEY) {

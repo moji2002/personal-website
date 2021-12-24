@@ -33,17 +33,21 @@ const Contact = () => {
       return toast("Just that?");
     }
 
+    const body = {
+      name: nameInput.value,
+      email: emailInput.value,
+      content: contentInput.value,
+    }
+
     const promise = fetch(window.location.href + "/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: nameInput.value,
-        email: emailInput.value,
-        content: contentInput.value,
-      }),
+  
+      body: JSON.stringify(body),
     });
+
 
     toast.promise(promise, {
       loading: "Loading",
